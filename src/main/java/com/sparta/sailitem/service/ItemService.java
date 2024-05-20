@@ -1,5 +1,6 @@
 package com.sparta.sailitem.service;
 
+import com.sparta.sailitem.dto.ItemListResponseDto;
 import com.sparta.sailitem.dto.ItemRequestDto;
 import com.sparta.sailitem.dto.ItemResponseDto;
 import com.sparta.sailitem.dto.ResponseMessage;
@@ -25,8 +26,8 @@ public class ItemService {
         return new ItemResponseDto(item);
     }
 
-    public List<ItemResponseDto> getItems() {
-        return itemRepository.findAll().stream().map(ItemResponseDto::new).toList();
+    public List<ItemListResponseDto> getItems() {
+        return itemRepository.findAll().stream().map(ItemListResponseDto::new).toList();
     }
 
     @Transactional

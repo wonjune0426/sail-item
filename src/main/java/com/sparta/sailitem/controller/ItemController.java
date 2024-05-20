@@ -1,5 +1,6 @@
 package com.sparta.sailitem.controller;
 
+import com.sparta.sailitem.dto.ItemListResponseDto;
 import com.sparta.sailitem.dto.ItemRequestDto;
 import com.sparta.sailitem.dto.ItemResponseDto;
 import com.sparta.sailitem.dto.ResponseMessage;
@@ -22,7 +23,7 @@ public class ItemController {
     }
 
     @GetMapping("/post")
-    public List<ItemResponseDto> getItems() {
+    public List<ItemListResponseDto> getItems() {
         return itemService.getItems();
     }
 
